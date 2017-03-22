@@ -7,7 +7,7 @@ git clone https://github.com/Olliecad1/bitcoin_raspberrypi_setup/blob/master/Ins
 ```
 Executing the Bash script
 ```
-sudo chmod +x ./Installing_Bitcoin_0.13.1.sh
+sudo chmod +x ./Installing_Bitcoin_0.14.0.sh
 ```
 Running the Script
 ```
