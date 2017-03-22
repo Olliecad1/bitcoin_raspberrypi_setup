@@ -11,7 +11,7 @@ sudo apt-get install build-essential autoconf libssl-dev libboost-dev libboost-c
 sudo apt-get install libqt4-dev qt4-dev-tools libprotobuf-dev protobuf-compiler libqrencode-dev -y
 
 # Setup Swap file
-sudo sed -i '16s/.*/CONF_SWAPSIZE=1024/g' /etc/dphys-swapfile
+sudo sed -i '16s/.*/CONF_SWAPSIZE=2048/g' /etc/dphys-swapfile
 sudo dphys-swapfile setup
 sudo dphys-swapfile swapon
 
@@ -24,7 +24,7 @@ cd db-4.8.30.NC/build_unix/
 make -j4
 sudo make install
 cd ~/bin
-git clone -b v0.13.1 https://github.com/bitcoin/bitcoin
+git clone -b v0.14.0 https://github.com/bitcoin/bitcoin
 cd bitcoin/
 ./autogen.sh
 ./configure CPPFLAGS="-I/usr/local/BerkeleyDB.4.8/include -O2" LDFLAGS="-L/usr/local/BerkeleyDB.4.8/lib" --enable-upnp-default --with-gui=qt4
